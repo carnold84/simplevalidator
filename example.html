@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jquery Validator Example</title>
+<link rel="stylesheet" href="css/general.css" />
+</head>
+<body>
+
+	<h1>Jquery Validator Example</h1>
+
+	<form id="example_form">
+        
+        <label for="email_example">Email example:</label>
+    
+        <input id="email_example" name="email_example" type="text" data-validate="email" />
+        
+        <label for="blank_example">Blank example:</label>
+    
+        <input id="blank_example" name="blank_example" type="text" data-validate="blank" />
+        
+        <label for="blank_example">Blank textarea example:</label>
+    
+        <textarea id="textarea_example" name="textarea_example" cols="35" rows="10" style="height: 140px;" data-validate="blank" ></textarea>
+        
+        <h2>Radio button example</h2>
+        
+        <input id="radio_example_1" name="radio_example" type="radio" />
+        
+        <label class="no_clear" for="radio_example_1">Radio button example 1</label>
+    
+        <input id="radio_example_2" name="radio_example" type="radio" />
+        
+        <label class="no_clear" for="radio_example_2">Radio button example 2</label>
+    
+        <input id="radio_example_3" name="radio_example" type="radio" />
+        
+        <label class="no_clear" for="radio_example_3">Radio button example 3</label>
+    
+        <h2 style="margin-top: 20px;">Checkbox example</h2>
+    
+        <input id="checkbox_example" name="checkbox_example" type="checkbox" style="margin-top: 2px;" data-validate="blank" />
+        
+        <label class="no_clear" for="checkbox_example">Compulsory Checkbox</label>
+        
+        <h2 style="margin-top: 20px; margin-bottom:10px;">Select example</h2>
+        
+        <label for="select_example">Blank select example:</label>
+        
+        <select id="select_example" name="select_example" data-validate="blank">
+            <option value="">Select...</option>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+        </select>
+        
+        <input id="file_example" name="file_example" type="file" style="margin-top:20px;" />
+        
+        <input id="submit_btn" type="submit" value="Submit" />
+    
+    </form>
+    
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/simpleValidator.jquery.js"></script>
+    <script>
+    	$(document).ready(function(e) {
+            $('#example_form').simpleValidator({
+				'onSuccess': success
+			});
+			
+			function success() {
+				alert('Success');	
+			}
+        });
+    </script>
+
+</body>
+</html>
