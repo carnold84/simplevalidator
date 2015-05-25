@@ -7,13 +7,13 @@
 </head>
 <body>
 
-	<h1>Jquery Validator Example</h1>
+	<h1>SimpleValidator Jquery Plugin Example</h1>
 
 	<form id="example_form">
         
-        <label for="email_example">Email example:</label>
+        <label for="email_example">Email and blank example:</label>
     
-        <input id="email_example" name="email_example" type="text" data-validate="email" />
+        <input id="email_example" name="email_example" type="text" data-validate="email blank" />
         
         <label for="blank_example">Blank example:</label>
     
@@ -23,7 +23,7 @@
     
         <textarea id="textarea_example" name="textarea_example" cols="35" rows="10" style="height: 140px;" data-validate="blank" ></textarea>
         
-        <h2>Radio button example</h2>
+        <!-- <h2>Radio button example</h2>
         
         <input id="radio_example_1" name="radio_example" type="radio" />
         
@@ -35,7 +35,7 @@
     
         <input id="radio_example_3" name="radio_example" type="radio" />
         
-        <label class="no_clear" for="radio_example_3">Radio button example 3</label>
+        <label class="no_clear" for="radio_example_3">Radio button example 3</label> -->
     
         <h2 style="margin-top: 20px;">Checkbox example</h2>
     
@@ -54,7 +54,7 @@
             <option value="Option 3">Option 3</option>
         </select>
         
-        <input id="file_example" name="file_example" type="file" style="margin-top:20px;" />
+        <!-- <input id="file_example" name="file_example" type="file" data-validate="blank" style="margin-top:20px;" /> -->
         
         <input id="submit_btn" type="submit" value="Submit" />
     
@@ -64,6 +64,7 @@
     <script type="text/javascript" src="js/simpleValidator.jquery.js"></script>
     <script>
     	$(document).ready(function(e) {
+            
             $('#example_form').simpleValidator({
 				'onSuccess': success
 			});
